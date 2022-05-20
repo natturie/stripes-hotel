@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stripes Hotel</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chatScreen.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper" id="firstPage">
+      <div class="container">
+        <input type="color" id="colorPicker" data-tooltip="Select a color" />
+        <div class="tabs">
+          <ul>
+            <li class="sign_in_li" id="btnSignIn">Sign in</li>
+            <li class="sign_up_li" id="btnSignUp">Sign up</li>
+          </ul>
+        </div>
+
+        <div class="sign_in" id="signIn">
+          <div class="input_field">
+            <input type="text" placeholder="E-mail" class="input" id="inMail" />
+          </div>
+          <div class="input_field">
+            <input
+              type="password"
+              placeholder="Password"
+              class="input"
+              id="inPass"
+            />
+          </div>
+          <div class="btn"><a id="confirmSignIn">Sign in</a></div>
+        </div>
+
+        <div class="sign_up" id="signUp">
+          <div class="input_field">
+            <input
+              type="text"
+              placeholder="Username"
+              class="input"
+              id="upNick"
+            />
+          </div>
+          <div class="input_field">
+            <input type="text" placeholder="E-mail" class="input" id="upMail" />
+          </div>
+          <div class="input_field">
+            <input
+              type="password"
+              placeholder="Password"
+              class="input"
+              id="upPass"
+            />
+          </div>
+          <div class="btn"><a id="confirmSignUp">Sign up</a></div>
+        </div>
+      </div>
+    </div>
+    <div id="secondPage" style="display: none">
+      <!-- style="display: none;"  HERE-->
+      <!-- HERE NEW CODE -->
+      <div class="flexChatScreen">
+        <aside class="sidebarChat">
+          <img class="logoStripes" src="./assets/logo.png" alt="" />
+          <div class="chatrooms">
+            <button class="newRoomBtn" id="addRoom">+ room</button>
+            <div id="inputNewRoom" style="display: none">
+              <input type="text" id="newRoomName" />
+              <button id="confirmAddRoom">confirm</button>
+            </div>
+            <ul id="listChatrooms" class="roomList"></ul>
+          </div>
+          <div class="profileSection">
+            <p>&#127770;</p>
+            <h3 class="username">
+              <span id="userInfo">Usuario</span>
+            </h3>
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </div>
+        </aside>
+        <section class="chatroomScreen">
+          <div class="screen">
+            <h3 id="screenTittle"></h3>
+            <ul id="messageList"></ul>
+          </div>
+          <div class="messagesInput">
+            <input
+              type="text"
+              id="newMessage"
+              class="inputText"
+              placeholder="Escribe aquí"
+            />
+            <input
+              type="color"
+              id="colorPickerText"
+              class="inputColor"
+              data-tooltip="Select a color for your nickname"
+            />
+            <button type="submit" id="btnSendMessage" class="btnSendMess">
+              Send
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </body>
+</html>
